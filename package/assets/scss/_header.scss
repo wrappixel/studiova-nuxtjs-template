@@ -1,0 +1,35 @@
+.menu-list {
+    list-style: none;
+
+    li {
+        a {
+            img {
+                transition: 0.5s;
+            }
+
+            text-decoration: none;
+            color: rgb(var(--v-theme-secondary));
+
+            .hide-icon {
+                opacity: 0;
+                width: 0;
+            }
+
+            &:hover {
+                .hide-icon {
+                    opacity: 1;
+                    width: 20px;
+                    margin-inline-end: 10px;
+                }
+            }
+
+            &.router-link-active {
+                .hide-icon {
+                    opacity: 1;
+                    width: 20px;
+                    margin-inline-end: 10px;
+                }
+            }
+        }
+    }
+}

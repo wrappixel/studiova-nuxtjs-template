@@ -1,0 +1,52 @@
+.v-btn{
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-weight: 600;
+
+    &.v-btn--size-large{
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+
+// styles.scss or in a scoped <style lang="scss">
+.interactive-button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  width: fit-content;
+  background-color: rgb(var(--v-theme-primary));
+  border-radius: 9999px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    background-color:rgb(var(--v-theme-secondary));
+  }
+
+  .label {
+    padding-left: 2rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color:rgb(var(--v-theme-secondary));
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+    transform: translateX(0);
+  }
+
+  &:hover .label {
+    color: white;
+    transform: translateX(2.5rem); // 10 x 0.25rem
+  }
+
+  .icon {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    transition: all 0.2s ease-in-out;
+    transform: translateX(0) rotate(0);
+  }
+
+  &:hover .icon {
+    transform: translateX(-9rem) rotate(45deg); // -36 x 0.25rem
+  }
+}
