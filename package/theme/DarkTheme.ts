@@ -12,6 +12,7 @@ const DARK_THEME: ThemeTypes = {
         secondary: '#1f2a2e',
         muted:'#1f2a2eb3',
         white:'#ffffff',
+        lightgray:'#000'
     }
 };
 

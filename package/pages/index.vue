@@ -4,4 +4,7 @@
   <SharedSectionSpacer />
   <!-- Section Spacer -->
   <HomepageStatsAndFacts />
+  <!-- Section Spacer -->
+  <SharedSectionSpacer />
+  <HomepagePortfolio/>
 </template>

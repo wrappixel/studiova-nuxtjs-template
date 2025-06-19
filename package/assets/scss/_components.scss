@@ -9,7 +9,7 @@
   }
 }
 
-
+// Button css
 .interactive-button {
   position: relative; // Needed for absolute children
   display: inline-flex;
@@ -57,4 +57,8 @@
     left: 0;
     transform: translate(15%, -50%) rotate(45deg);
   }
+}
+
+.v-chip--variant-outlined {
+    border: thin solid rgb(var(--v-theme-muted));
 }

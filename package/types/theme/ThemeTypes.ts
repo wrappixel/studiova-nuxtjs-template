@@ -8,5 +8,6 @@ export type ThemeTypes = {
         gray?:string;
         white?:string;
         muted?:string;
+        lightgray?:string;
     };
 };

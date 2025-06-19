@@ -4,7 +4,11 @@ import * as directives from "vuetify/directives";
 import "vuetify/styles";
 import "@mdi/font/css/materialdesignicons.css";
 //import style
+import "vue3-carousel/dist/carousel.css";
 import "@/assets/scss/style.scss";
+
+//Mock Api data
+import "../_mockApis";
 
 import { LIGHT_THEME } from "@/theme/LightTheme";
 import { DARK_THEME } from "@/theme/DarkTheme";

@@ -12,6 +12,7 @@ const LIGHT_THEME: ThemeTypes = {
         secondary: '#1f2a2e',
         muted:'#E0E0E0',
         white:'#ffffff',
+        lightgray:'#F4F8FA'
     }
 };
 
