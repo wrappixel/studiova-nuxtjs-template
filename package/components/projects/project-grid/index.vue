@@ -9,14 +9,7 @@ const sliderSettings = {
   snapAlign: "start",
   itemsToShow: 4,
 };
-const sliderBreakpoints = {
-  300: { itemsToShow: 1 },
-  600: { itemsToShow: 1 },
-  767: { itemsToShow: 2 },
-  991: { itemsToShow: 3 },
-  1500: { itemsToShow: 4 },
-  1800: { itemsToShow: 4 },
-};
+
 
 const store = useProjectsGridStore();
 
@@ -40,8 +33,8 @@ const slugify = (title?: string) => {
   <div>
     <carousel
       :settings="sliderSettings"
-      :breakpoints="sliderBreakpoints"
-      :autoplay="3000"
+      :itemsToShow="4"
+      
       :wrap-around="true"
       class="overflow-hidden"
     >
@@ -78,9 +71,9 @@ const slugify = (title?: string) => {
           </div>
         </div>
       </slide>
-      <!-- <template #addons>
+      <template #addons>
         <CarouselPagination />
-      </template> -->
+      </template>
     </carousel>
   </div>
 </template>

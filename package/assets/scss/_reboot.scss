@@ -12,6 +12,15 @@
   }
 
 }
-.w-64{
+
+.w-64 {
   width: 64px;
+}
+
+.hover-primary-title {
+  &:hover {
+    .title {
+      color: rgb(var(--v-theme-primary));
+    }
+  }
 }

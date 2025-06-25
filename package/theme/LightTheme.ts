@@ -5,7 +5,6 @@ const LIGHT_THEME: ThemeTypes = {
     dark: false,
     variables: {
         'border-color': '#e0e6eb',
-        'border-opacity': 1
     },
     colors: {
         primary: '#C1FF72',

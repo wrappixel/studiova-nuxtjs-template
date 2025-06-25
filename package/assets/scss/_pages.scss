@@ -45,6 +45,7 @@
   top: 30%;
 }
 
+
 .carousel__track {
   gap: 30px;
   padding: 0 20px;
@@ -55,6 +56,23 @@
       object-fit: cover;
       object-position: center;
     }
+
+    &.carousel__slide {
+      display: block;
+    }
+  }
+}
+
+.carousel__pagination {
+  margin-top: 50px;
+  position: relative;
+  .carousel__pagination-button{
+    height: 10px;
+    width: 10px;
+    border-radius: 50px;
+  }
+  .carousel__pagination-button--active{
+    background-color:  rgb(var(--v-theme-secondary));
   }
 }
 
