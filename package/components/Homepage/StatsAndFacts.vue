@@ -19,6 +19,7 @@ const items = [
 
 <template>
   <div class="position-relative">
+    <SharedSectionSpacer />
     <div class="container-lg">
       <v-row>
         <v-col cols="12" lg="4">
@@ -58,5 +59,6 @@ const items = [
       </v-row>
     </div>
     <img :src="BgImage" alt="icon" class="bg-icon" />
+    <SharedSectionSpacer />
   </div>
 </template>

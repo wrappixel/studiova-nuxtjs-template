@@ -3,7 +3,7 @@ import { Icon } from "@iconify/vue";
 import WhyImg from "/images/projects/whychoose.png";
 import Profile from "/images/profile/user.svg";
 import Overlay from "/images/background/bg-ellipse.svg";
-import Ring from "/images/background/bg-ring.svg";
+
 import user1 from "/images/profile/avatar_1.jpg";
 import user2 from "/images/profile/avatar_2.jpg";
 import user3 from "/images/profile/avatar_3.jpg";
@@ -19,6 +19,7 @@ const users = [
 ];
 </script>
 <template>
+  <SharedSectionSpacer />
   <div class="container-lg">
     <v-row>
       <!-- LEFT SIDE IMAGE -->
@@ -132,7 +133,7 @@ const users = [
           </v-col>
           <v-col cols="12" md="4">
             <div
-              class="border border-sm border-opacity-100 pa-7 position-relative overflow-hidden"
+              class="border border-sm border-opacity-100 pa-7 position-relative overflow-hidden brand-served"
             >
               <div class="pb-4">
                 <h2 class="text-h2">238+</h2>
@@ -150,18 +151,13 @@ const users = [
                   </p>
                 </div>
               </div>
-              <!-- Bg Overlay -->
-              <img
-                :src="Ring"
-                alt="icon"
-                class="position-absolute top-0 right-0"
-                width="600"
-                height="600"
-              />
+              <div class="first-ring"></div>
+              <div class="second-ring"></div>
             </div>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
   </div>
+  <SharedSectionSpacer />
 </template>

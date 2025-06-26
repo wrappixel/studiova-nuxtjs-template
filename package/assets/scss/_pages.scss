@@ -42,7 +42,7 @@
 
 .bg-icon {
   position: absolute;
-  top: 30%;
+  top: 35%;
 }
 
 
@@ -66,13 +66,15 @@
 .carousel__pagination {
   margin-top: 50px;
   position: relative;
-  .carousel__pagination-button{
+
+  .carousel__pagination-button {
     height: 10px;
     width: 10px;
     border-radius: 50px;
   }
-  .carousel__pagination-button--active{
-    background-color:  rgb(var(--v-theme-secondary));
+
+  .carousel__pagination-button--active {
+    background-color: rgb(var(--v-theme-secondary));
   }
 }
 
@@ -113,4 +115,93 @@
       }
     }
   }
+}
+
+.brand-served {
+  .first-ring {
+    position: absolute;
+    height: 490px;
+    width: 490px;
+    border-radius: 100%;
+    border: 1px solid rgba(var(--v-theme-secondary), 0.1);
+    top: -62%;
+    left: -42%;
+  }
+
+  .second-ring {
+    position: absolute;
+    height: 490px;
+    width: 490px;
+    border-radius: 100%;
+    border: 1px solid rgba(var(--v-theme-secondary), 0.1);
+    bottom: -38%;
+    left: -35%;
+  }
+}
+
+.our-team {
+
+  .teambox,
+  .team-social {
+    opacity: 0;
+    transition: 0.5s;
+  }
+
+  &:hover {
+    .teambox {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+    }
+
+    .team-social {
+      opacity: 1;
+      z-index: 1;
+    }
+
+  }
+
+  .team-social {
+    bottom: 28px;
+    right: 28px;
+
+    .social-icon {
+      background-color: white;
+
+      &:hover {
+        background-color: rgb(var(--v-theme-primary));
+      }
+    }
+  }
+}
+
+.marquee-content {
+    animation: marquee 20s linear infinite running;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+.marquee-tag {
+    width: 200px;
+    transition: all 0.2s ease;
+}
+
+.marquee-tag:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translate(-50%);
+    }
 }

@@ -1,15 +1,10 @@
 <template>
   <HomepageBannerSection />
-
-  <SharedSectionSpacer />
-    <HomepageStatsAndFacts />
-  <SharedSectionSpacer />
-
+  <HomepageStatsAndFacts />
   <HomepagePortfolio />
   <HomepageWhatweDo />
-
-  <SharedSectionSpacer />
-    <HomepageWhyChoose />
-  <SharedSectionSpacer />
-
+  <HomepageWhyChoose />
+  <HomepageStoriesFromClient />
+  <HomepageMeetOurTeam/>
+  <HomepagePricing/>
 </template>
