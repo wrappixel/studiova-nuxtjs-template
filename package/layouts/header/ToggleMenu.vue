@@ -52,7 +52,7 @@ const items: Item[] = [
       </v-btn>
     </template>
     <v-sheet rounded="lg" width="380" elevation="10" class="pa-6 mt-n12">
-      <div class="d-flex align-center justify-space-between border-b pb-4">
+      <div class="d-flex align-center justify-space-between border-b pb-4 border-opacity-100">
         <p class="text-subtitle-1 text-dark">Menu</p>
         <v-btn
           size="35"

@@ -1,4 +1,4 @@
-//BlogGrid 
+ 
 export type ProjectsTypes = {
     id?: string | number;
     project_image?: string;

@@ -7,4 +7,7 @@
   <HomepageStoriesFromClient />
   <HomepageMeetOurTeam/>
   <HomepagePricing/>
+  <HomepageFAQ/>
+  <HomepageRecentNews/>
+  <HomepageGetinTouch/>
 </template>

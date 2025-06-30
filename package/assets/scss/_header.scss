@@ -1,3 +1,19 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    padding: 28px 0;
+    transition: all 0.5s ease-in-out;
+    animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
+    border-top: 4px solid rgb(var(--v-theme-primary));
+}
+
+.sticky-header {
+    padding: 20px 0;
+    border-top: 0;
+}
+
 .menu-list {
     list-style: none;
 

@@ -15,7 +15,7 @@ const toggleTheme = () => {
 <template>
   <div class="flex items-center gap-4">
     <v-btn
-      icon
+      icon flat
       @click="toggleTheme"
       class="rounded-full bg-transparent"
     >

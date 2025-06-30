@@ -1,5 +1,11 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import logo1 from "/images/pricing/partners-1.svg";
+import logo2 from "/images/pricing/partners-2.svg";
+import logo3 from "/images/pricing/partners-3.svg";
+import logo4 from "/images/pricing/partners-4.svg";
+import logo5 from "/images/pricing/partners-5.svg";
+
 const plans = [
   {
     title: "Launch",
@@ -44,15 +50,63 @@ const plans = [
 ];
 
 const logos = [
-    {
-
-    }
+  {
+    logoimg: logo1,
+  },
+  {
+    logoimg: logo2,
+  },
+  {
+    logoimg: logo3,
+  },
+  {
+    logoimg: logo4,
+  },
+  {
+    logoimg: logo5,
+  },
+  {
+    logoimg: logo1,
+  },
+  {
+    logoimg: logo2,
+  },
+  {
+    logoimg: logo3,
+  },
+  {
+    logoimg: logo4,
+  },
+  {
+    logoimg: logo5,
+  },
+  {
+    logoimg: logo1,
+  },
+  {
+    logoimg: logo4,
+  },
+  {
+    logoimg: logo5,
+  },
+  {
+    logoimg: logo1,
+  },
+  {
+    logoimg: logo2,
+  },
+  {
+    logoimg: logo3,
+  },
+  {
+    logoimg: logo4,
+  },
 ];
 </script>
 <template>
   <div class="bg-lightgray">
     <SharedSectionSpacer />
-    <div class="container-lg">
+    <div class="container-lg overflow-hidden">
       <v-row>
         <!-- LEFT SIDE IMAGE -->
         <v-col cols="12" lg="4" class="position-relative">
@@ -163,13 +217,13 @@ const logos = [
         <p class="text-center text-subtitle-1">
           More than 320 trusted partners & clients
         </p>
-        <!-- <div class="marquee w-100 d-flex">
-            <div class="marquee-content d-flex align-items-center gap-8">
-                <div class="marquee-tag">
-                     <img src=""   
-                </div>
+        <div class="marquee d-flex mt-10">
+          <div class="marquee-content d-flex align-center ga-10 justify-center">
+            <div class="marquee-tag" v-for="item in logos" :key="item.logoimg">
+              <img :src="item.logoimg" />
             </div>
-        </div> -->
+          </div>
+        </div>
       </div>
     </div>
     <SharedSectionSpacer />

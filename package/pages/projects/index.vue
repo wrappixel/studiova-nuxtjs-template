@@ -1,3 +1,0 @@
-<template>
-    Projects page
-</template>

@@ -28,3 +28,13 @@
 .obj-cover {
   object-fit: cover;
 }
+.hover-primary-link{
+  &:hover{
+     color: rgb(var(--v-theme-primary)) !important;
+  }
+}
+
+.list-style-none{
+  list-style: none;
+  margin-left: 0;
+}
