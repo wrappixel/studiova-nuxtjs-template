@@ -10,8 +10,8 @@ const FooterLinks = ref([
     url: "/about",
   },
   {
-    title: "Services",
-    url: "#service",
+    title: "Blog",
+    url: "/blog",
   },
   {
     title: "Work",

@@ -26,12 +26,12 @@ const items: Item[] = [
     url: "/blog",
   },
   {
-    title: "Services",
-    url: "#service",
-  },
-  {
     title: "Contact",
     url: "/contact",
+  },
+   {
+    title: "Error",
+    url: "/error",
   },
 ];
 </script>

@@ -6,7 +6,7 @@ import { Icon } from "@iconify/vue";
 const isScrolled = ref(false);
 
 const handleScroll = () => {
-  isScrolled.value = window.scrollY > 10;
+  isScrolled.value = window.scrollY > 50;
 };
 
 const logoSrc = computed(() =>
