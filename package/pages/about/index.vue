@@ -1,3 +1,6 @@
 <template>
-    About us
+    <AboutPageBanner/>
+    <AboutPageCounterCards/>
+    <AboutPageFeatureBanner/>
+    <HomepageMeetOurTeam/>
 </template>

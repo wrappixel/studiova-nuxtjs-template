@@ -8,8 +8,7 @@ import user1 from "/images/profile/avatar_1.jpg";
 import user2 from "/images/profile/avatar_2.jpg";
 import user3 from "/images/profile/avatar_3.jpg";
 import user4 from "/images/profile/avatar_4.jpg";
-
-import DarkLogo from "/images/logos/DarkLogo.svg";
+import Logo from '@/layouts/shared/logo/index.vue';
 
 const users = [
   { src: user1, alt: "User 1" },
@@ -142,9 +141,9 @@ const users = [
                   >Brands served worldwide</small
                 >
               </div>
-              <div class="pt-md-16 pt-8">
+              <div class="pt-md-12">
                 <div class="pt-md-16">
-                  <img :src="DarkLogo" width="150" />
+                  <Logo/>
                   <p class="text-subtitle-1 mt-3">
                     Our global reach allows us to create unique, culturally
                     relevant designs for businesses across different industries.

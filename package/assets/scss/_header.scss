@@ -7,6 +7,7 @@
     transition: all 0.5s ease-in-out;
     animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
     border-top: 4px solid rgb(var(--v-theme-primary));
+    border-bottom: 0;
 }
 
 .sticky-header {

@@ -7,27 +7,27 @@ const FooterLinks = ref([
   },
   {
     title: "About",
-    url: "/",
+    url: "/about",
   },
   {
     title: "Services",
-    url: "/",
+    url: "#service",
   },
   {
     title: "Work",
-    url: "/",
+    url: "/projects",
   },
   {
     title: "Terms",
-    url: "/",
+    url: "/terms-conditions",
   },
   {
     title: "Privacy Policy",
-    url: "/",
+    url: "/privacy-policy",
   },
   {
     title: "Error 404",
-    url: "/",
+    url: "/error",
   },
 ]);
 
@@ -104,5 +104,7 @@ const SocialLinks = ref([
       </v-row>
     </div>
     <SharedSectionSpacer />
+
+    <ScrollToTop/>
   </div>
 </template>

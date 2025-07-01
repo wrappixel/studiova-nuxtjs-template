@@ -15,8 +15,6 @@ const logoSrc = computed(() =>
     : "/images/logos/WhiteLogo.svg"
 );
 
-
-
 const LIGHT = "LIGHT_THEME";
 const DARK = "DARK_THEME";
 
@@ -38,14 +36,12 @@ onBeforeUnmount(() => {
   <header
     :class="[
       'header',
-      isScrolled
-        ? 'bg-primary sticky-header shadow-md'
-        : 'bg-transparent border-primary border-t-2',
+      isScrolled ? 'bg-primary sticky-header shadow-md' : 'bg-transparent ',
     ]"
   >
     <div class="container-lg">
       <div class="d-flex justify-space-between align-center">
-        <img :src="logoSrc" />
+        <NuxtLink to="/"><img :src="logoSrc" /></NuxtLink>
         <div class="d-flex ga-6">
           <div class="flex items-center gap-4">
             <v-btn
@@ -62,7 +58,7 @@ onBeforeUnmount(() => {
                 "
                 width="40"
                 height="40"
-                class="text-white"
+                :class="[isScrolled ? 'text-secondary' : 'text-white']"
               />
             </v-btn>
           </div>

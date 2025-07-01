@@ -2,14 +2,6 @@
 import { onMounted, computed } from "vue";
 import { useProjectsGridStore } from "@/store/project";
 import { Icon } from "@iconify/vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
-import { Pagination as CarouselPagination } from "vue3-carousel";
-/*Slider*/
-const sliderSettings = {
-  snapAlign: "start",
-  itemsToShow: 4,
-};
-
 
 const store = useProjectsGridStore();
 
@@ -30,27 +22,23 @@ const slugify = (title?: string) => {
 </script>
 
 <template>
-  <div>
-    <carousel
-      :settings="sliderSettings"
-      :itemsToShow="4"
-      
-      :wrap-around="true"
-      class="overflow-hidden"
-    >
-      <slide v-for="projects in getPosts" :key="projects.id">
+  <SharedSectionSpacer />  
+  <div class="container-lg">
+    <v-row>
+      <v-col cols="12" lg="6" v-for="projects in getPosts" :key="projects.id">
         <div>
           <NuxtLink
             :to="`/projects/${slugify(projects.project_title)}`"
             class="project-card"
           >
-            <div class="image-wrapper lh-0">
-              <img
+            <div class="image-wrapper">
+              <v-img
                 :src="projects.project_image"
                 alt="image"
                 class="project-image w-100"
                 cover
-                
+                height="500"
+
               />
               <div class="image-overlay">
                 <v-avatar size="60" class="icon bg-primary">
@@ -71,10 +59,8 @@ const slugify = (title?: string) => {
             }}</v-chip>
           </div>
         </div>
-      </slide>
-      <template #addons>
-        <CarouselPagination />
-      </template>
-    </carousel>
+      </v-col>
+    </v-row>
   </div>
+  <SharedSectionSpacer />
 </template>

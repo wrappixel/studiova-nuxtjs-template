@@ -42,7 +42,7 @@ const activeItem = ref(items[0]);
 </script>
 
 <template>
-  <div class="position-relative bg-secondary">
+  <div class="position-relative bg-secondary" id="service">
     <SharedSectionSpacer />
 
     <div class="container-lg">

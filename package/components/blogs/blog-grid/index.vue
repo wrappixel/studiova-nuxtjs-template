@@ -22,31 +22,33 @@ const slugify = (title?: string) => {
 </script>
 
 <template>
-  <v-row>
-    <v-col cols="12" md="6" v-for="blog in getPosts." :key="blog.id">
-      
+  <SharedSectionSpacer />
+  <div class="container-lg">
+    <v-row>
+      <v-col cols="12" md="6" v-for="blog in getPosts" :key="blog.id">
         <NuxtLink
           :to="`/blog/${slugify(blog.blog_title)}`"
           class="project-card"
         >
-          <div class="image-wrapper">
-            <img
+          <div class="blog-image-wrapper">
+            <v-img
+              class="blog-image"
               :src="blog.blog_image"
-              alt="image"
-              class="project-image w-100"
+              height="600"
               cover
-            />
-            <div class="image-overlay">
-              <v-avatar size="60" class="icon bg-primary">
-                <Icon icon="material-symbols:arrow-outward" height="25" />
-              </v-avatar>
-            </div>
+            ></v-img>
           </div>
         </NuxtLink>
-        <h3 class="text-h3 text-secondary py-5">
-          {{ blog.blog_title }}
-        </h3>
-      
-    </v-col>
-  </v-row>
+        <v-card-text class="px-0 pt-4">
+          <div class="text-subtitle-2 text-secondary opacity-70">
+            {{ blog.blog_date }}
+          </div>
+          <h4 class="text-h4 text-secondary">
+            {{ blog.blog_title }}
+          </h4>
+        </v-card-text>
+      </v-col>
+    </v-row>
+  </div>
+  <SharedSectionSpacer />
 </template>

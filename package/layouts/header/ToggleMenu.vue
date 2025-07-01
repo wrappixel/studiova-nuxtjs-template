@@ -27,7 +27,7 @@ const items: Item[] = [
   },
   {
     title: "Services",
-    url: "/services",
+    url: "#service",
   },
   {
     title: "Contact",
@@ -85,6 +85,7 @@ const items: Item[] = [
             size="large"
             color="secondary"
             elevation="0"
+            to="/auth/signin"
           >
             Sign in
           </v-btn>
@@ -96,6 +97,7 @@ const items: Item[] = [
             variant="flat"
             size="large"
             elevation="0"
+            to="/auth/signup"
           >
             Sign up
           </v-btn>

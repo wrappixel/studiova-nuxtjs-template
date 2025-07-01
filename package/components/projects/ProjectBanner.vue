@@ -1,19 +1,14 @@
 <script setup lang="ts">
 import AnimatedIcon from "/images/svgs/astrisk-icon.svg";
+import ManImage from "/images/background/projects-banner.png";
 </script>
+
 <template>
-  <v-container fluid class="hero-container pa-0">
-    <!-- Video Background -->
-    <video autoplay muted loop playsinline class="video-bg">
-      <source src="/video/banner-video.mp4" type="video/mp4" />
-    </video>
-
-    <!-- Dark overlay -->
-    <div class="overlay"></div>
-
-    <!-- Content bottom-left -->
+  <div class="common-banner position-relative">
+    <v-img :src="ManImage" cover height="650" class="w-100"></v-img>
+    <div class="banner-overlay"></div>
     <div class="container-lg">
-      <div class="hero-content">
+      <div class="common-banner-content">
         <div class="mw-460">
           <!-- Top row: icon + paragraph -->
           <div class="d-flex ga-6">
@@ -25,24 +20,23 @@ import AnimatedIcon from "/images/svgs/astrisk-icon.svg";
               class="icon-rotate"
             />
             <p class="text-white text-subtitle-1 mb-0">
-              <span class="opacity-70">We create</span>
+              <span class="opacity-70">A</span>
               <span class="text-primary opacity-100">
-                high-performing
-              </span>
+                showcase of creativity</span
+              >
               <span class="opacity-70"
-                >digital designs that elevate brands and enhance
-                conversions.</span
+                >, strategy, and results explore the projects that define
+                us.</span
               >
             </p>
           </div>
         </div>
-
         <!-- Bottom row: title + badge -->
         <div class="d-flex ga-5 align-end mt-6">
-          <h1 class="text-white text-h1 font-weight-bold mb-0">Studiova</h1>
+          <h1 class="text-white text-h1 font-weight-bold mb-0">Projects</h1>
           <SharedBigBadge />
         </div>
       </div>
     </div>
-  </v-container>
+  </div>
 </template>

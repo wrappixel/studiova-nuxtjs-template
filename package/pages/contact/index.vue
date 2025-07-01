@@ -1,3 +1,4 @@
 <template>
-    Contact Page
+    <ContactPageContactBanner/>
+    <HomepageGetinTouch/>
 </template>

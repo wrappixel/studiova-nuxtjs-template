@@ -1,20 +1,72 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { ref, onMounted } from "vue";
 import BgImage from "/images/background/bg-astrisk-icon.svg";
-const items = [
+
+interface CounterItem {
+  value: number;
+  suffix: string;
+  caption: string;
+}
+
+const items = ref<CounterItem[]>([
   {
-    count: "40K",
+    value: 40000,
+    suffix: "K",
     caption: "People who have launched their websites",
   },
   {
-    count: "238",
+    value: 238,
+    suffix: "",
     caption: "Experienced professionals ready to assist",
   },
   {
-    count: "3M",
+    value: 3000000,
+    suffix: "M",
     caption: "Support through messages and live consultations",
   },
-];
+]);
+
+// Animated values
+const animatedValues = ref<number[]>(items.value.map(() => 0));
+
+onMounted(() => {
+  items.value.forEach((item, index) => {
+    animateCounter(item.value, index);
+  });
+});
+
+function animateCounter(target: number, index: number) {
+  const duration = 2000;
+  const frameDuration = 1000 / 60;
+  const totalFrames = Math.round(duration / frameDuration);
+  let frame = 0;
+
+  const counterInterval = setInterval(() => {
+    frame++;
+    const progress = frame / totalFrames;
+    const current = Math.floor(target * progress);
+    animatedValues.value[index] = current;
+
+    if (frame === totalFrames) {
+      animatedValues.value[index] = target;
+      clearInterval(counterInterval);
+    }
+  }, frameDuration);
+}
+
+function formatNumber(value: number, suffix: string) {
+  if (suffix === "K") {
+    return `${Math.floor(value / 1000)}K`;
+  } else if (suffix === "M") {
+    const millions = value / 1_000_000;
+    return Number.isInteger(millions)
+      ? `${millions}M`
+      : `${millions.toFixed(1)}M`;
+  } else {
+    return `${value}`;
+  }
+}
 </script>
 
 <template>
@@ -36,10 +88,12 @@ const items = [
             <div class="d-flex flex-md-row flex-column ga-8">
               <div
                 class="d-flex flex-column ga-3 flex-grow-1 border-t border-muted"
-                v-for="item in items"
-                :key="item.count"
+                v-for="(item, index) in items"
+                :key="index"
               >
-                <h3 class="text-60 text-secondary pt-6">{{ item.count }} +</h3>
+                <h3 class="text-60 text-secondary pt-6">
+                  {{ formatNumber(animatedValues[index], item.suffix) }}+
+                </h3>
                 <p
                   class="text-subtitle-2 text-secondary opacity-70 font-weight-regular"
                 >
