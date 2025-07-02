@@ -1,17 +1,17 @@
 .header {
-    position: fixed;
+   position: fixed;
     top: 0;
     width: 100%;
     z-index: 999;
     padding: 28px 0;
-    transition: all 0.5s ease-in-out;
+    transition: padding 0.5s ease-in-out, background-color 0.5s ease-in-out;
     border-top: 4px solid rgb(var(--v-theme-primary));
     border-bottom: 0;
 }
 
 .sticky-header {
     padding: 20px 0;
-    border-top: 0;
+    border-top-color: transparent;
 }
 
 .menu-list {
