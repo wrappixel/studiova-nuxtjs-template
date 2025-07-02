@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import DarkLogo from '/images/logos/Darkprimary.svg';
+import DarkLogopr from '/images/logos/Darkprimary.svg';
 </script>
 <template>
     <div class="logo lh-normal">
         <NuxtLink to="/">
-            <img :src="DarkLogo" alt="home" />
+            <img :src="DarkLogopr" alt="home" />
         </NuxtLink>
     </div>
 </template>
