@@ -7,10 +7,10 @@ definePageMeta({
 });
 </script>
 <template>
-  <div class="d-flex justify-center align-center h-screen">
+  <div class="d-flex justify-center align-center h-screen bg-accent">
     <div class="d-flex flex-column ga-7 align-center">
-      <img :src="ErrorImg" alt="" height="200" />
-      <h2 class="text-h2 text-center text-secondary">Oops! Page Not Found</h2>
+            <img :src="ErrorImg" alt="" class="error-img" />
+      <h2 class="text-h2 text-center text-dark">Oops! Page Not Found</h2>
       <v-btn class="interactive-button" to="/" size="lg" flat>
         <span class="label">Back To Home</span>
         <v-avatar size="45" class="icon bg-white">

@@ -22,6 +22,7 @@ const slugify = (title?: string) => {
 </script>
 
 <template>
+  <div class="bg-darkgray">
   <SharedSectionSpacer />  
   <div class="container-lg">
     <v-row>
@@ -47,14 +48,14 @@ const slugify = (title?: string) => {
               </div>
             </div>
           </NuxtLink>
-          <h3 class="text-h3 text-secondary py-5">
+          <h3 class="text-h3 text-dark py-5">
             {{ projects.project_title }}
           </h3>
           <div class="d-flex ga-3">
-            <v-chip variant="outlined" class="text-subtitle-2 text-secondary">{{
+            <v-chip variant="outlined" class="text-subtitle-2 text-dark">{{
               projects.tag1
             }}</v-chip>
-            <v-chip variant="outlined" class="text-subtitle-2 text-secondary">{{
+            <v-chip variant="outlined" class="text-subtitle-2 text-dark">{{
               projects.tag2
             }}</v-chip>
           </div>
@@ -63,4 +64,5 @@ const slugify = (title?: string) => {
     </v-row>
   </div>
   <SharedSectionSpacer />
+  </div>
 </template>

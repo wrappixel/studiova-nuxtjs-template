@@ -27,7 +27,7 @@ import MainImage from "/images/background/privacy-policy.png";
           </div>
         </div>
         <!-- Bottom row: title + badge -->
-        <div class="d-flex ga-5 align-end mt-6">
+       <div class="d-flex flex-md-row flex-column ga-5 align-md-end align-start mt-md-6 mt-3">
           <h1 class="text-white text-h1 font-weight-bold mb-0">
             Terms & Conditions
           </h1>
@@ -37,7 +37,8 @@ import MainImage from "/images/background/privacy-policy.png";
     </div>
   </div>
 
-  <div class="container-lg my-lg-16 my-8">
+ <div class="bg-darkgray leagal">
+    <div class="container-lg py-lg-16 py-8">
     <p class="text-subtitle-1">
       This Nuxtjs Template Terms of Service (“<span class="font-weight-bold"
         >Agreement</span
@@ -61,7 +62,7 @@ import MainImage from "/images/background/privacy-policy.png";
       the section where they are first used
     </p>
     <div class="my-6">
-      <h4 class="text-h4 text-secondary">1. Definitions</h4>
+      <h4 class="text-h4 text-dark">1. Definitions</h4>
       <ul class="mt-6 list-style-none">
         <li>
           <p class="text-subtitle-1">
@@ -133,7 +134,7 @@ import MainImage from "/images/background/privacy-policy.png";
       </ul>
     </div>
     <div class="my-6">
-      <h4 class="text-h4 text-secondary">2. License and use rights</h4>
+      <h4 class="text-h4 text-dark">2. License and use rights</h4>
       <ul class="mt-6 list-style-none">
         <li>
           <p class="text-subtitle-1">
@@ -167,4 +168,6 @@ import MainImage from "/images/background/privacy-policy.png";
       </ul>
     </div>
   </div>
+  </div>
+
 </template>

@@ -31,6 +31,7 @@ const faqItems = ref([
 </script>
 
 <template>
+  <div class="faq bg-darkgray">
   <SharedSectionSpacer />
   <div class="container-lg">
     <v-row>
@@ -71,4 +72,5 @@ const faqItems = ref([
     </v-row>
   </div>
   <SharedSectionSpacer />
+  </div>
 </template>

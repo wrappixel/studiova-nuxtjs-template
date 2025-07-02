@@ -2,14 +2,42 @@
 import { onMounted, computed } from "vue";
 import { useProjectsGridStore } from "@/store/project";
 import { Icon } from "@iconify/vue";
-import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import { Carousel, Slide } from "vue3-carousel";
 import { Pagination as CarouselPagination } from "vue3-carousel";
-/*Slider*/
-const sliderSettings = {
+import type { CarouselSettings } from "vue3-carousel";
+
+const sliderSettings: CarouselSettings = {
   snapAlign: "start",
   itemsToShow: 4,
-};
+  wrapAround: true,
+  breakpoints: {
+    1800: {
+      itemsToShow: 4,
+      snapAlign: "start",
+    },
+    1600: {
+      itemsToShow: 3,
+      snapAlign: "start",
+    },
+    1368: {
+      itemsToShow: 3,
+      snapAlign: "start",
+    },
+    1024: {
+      itemsToShow: 2,
+      snapAlign: "center",
+    },
 
+    768: {
+      itemsToShow: 2,
+      snapAlign: "center",
+    },
+    300: {
+      itemsToShow: 1,
+      snapAlign: "center",
+    },
+  },
+};
 
 const store = useProjectsGridStore();
 
@@ -19,7 +47,6 @@ onMounted(() => {
 
 const getPosts = computed(() => store.projectGrid);
 
-// Slug function to create URL-friendly links
 const slugify = (title?: string) => {
   if (!title) return "";
   return title
@@ -32,11 +59,11 @@ const slugify = (title?: string) => {
 <template>
   <div>
     <carousel
-      :settings="sliderSettings"
-      :itemsToShow="4"
-      
-      :wrap-around="true"
       class="overflow-hidden"
+      :snapAlign="sliderSettings.snapAlign"
+      :itemsToShow="sliderSettings.itemsToShow"
+      :wrapAround="sliderSettings.wrapAround"
+      :breakpoints="sliderSettings.breakpoints"
     >
       <slide v-for="projects in getPosts" :key="projects.id">
         <div>
@@ -50,7 +77,6 @@ const slugify = (title?: string) => {
                 alt="image"
                 class="project-image w-100"
                 cover
-                
               />
               <div class="image-overlay">
                 <v-avatar size="60" class="icon bg-primary">
@@ -59,14 +85,14 @@ const slugify = (title?: string) => {
               </div>
             </div>
           </NuxtLink>
-          <h3 class="text-h3 text-secondary py-5">
+          <h3 class="text-h3 text-dark py-5">
             {{ projects.project_title }}
           </h3>
           <div class="d-flex ga-3">
-            <v-chip variant="outlined" class="text-subtitle-2 text-secondary">{{
+            <v-chip variant="outlined" class="text-subtitle-2 text-dark">{{
               projects.tag1
             }}</v-chip>
-            <v-chip variant="outlined" class="text-subtitle-2 text-secondary">{{
+            <v-chip variant="outlined" class="text-subtitle-2 text-dark">{{
               projects.tag2
             }}</v-chip>
           </div>

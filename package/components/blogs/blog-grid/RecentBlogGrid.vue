@@ -37,10 +37,10 @@ const slugify = (title?: string) => {
           ></v-img>
         </div>
         <v-card-text class="px-0 pt-4">
-          <div class="text-subtitle-2 text-secondary opacity-70">
+          <div class="text-subtitle-2 text-dark opacity-70">
             {{ getPosts[0]?.blog_date }}
           </div>
-          <h4 class="text-h4 text-secondary">
+          <h4 class="text-h4 text-dark">
             {{ getPosts[0]?.blog_title }}
           </h4>
         </v-card-text>
@@ -67,10 +67,10 @@ const slugify = (title?: string) => {
               ></v-img>
             </div>
             <v-card-text class="px-0 pt-4">
-              <div class="text-subtitle-2 text-secondary opacity-70">
+              <div class="text-subtitle-2 text-dark opacity-70">
                 {{ blog.blog_date }}
               </div>
-              <h4 class="text-h4 text-secondary">
+              <h4 class="text-h4 text-dark">
                 {{ blog.blog_title }}
               </h4>
             </v-card-text>

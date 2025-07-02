@@ -9,5 +9,9 @@ export type ThemeTypes = {
         white?:string;
         muted?:string;
         lightgray?:string;
+        dark?:string;
+        surface?:string;
+        darkgray?:string;
+        accent?:string;
     };
 };

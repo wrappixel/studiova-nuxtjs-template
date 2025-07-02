@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onBeforeUnmount, watch, computed } from "vue";
 import ToggleMenu from "./ToggleMenu.vue";
 import { useTheme } from "vuetify";
 import { Icon } from "@iconify/vue";
+
 const isScrolled = ref(false);
 
 const handleScroll = () => {
@@ -21,8 +22,23 @@ const DARK = "DARK_THEME";
 const theme = useTheme();
 
 const toggleTheme = () => {
-  theme.global.name.value = theme.global.name.value === LIGHT ? DARK : LIGHT;
+  theme.global.name.value =
+    theme.global.name.value === LIGHT ? DARK : LIGHT;
 };
+
+// ✅ Sync dark class with Vuetify theme
+watch(
+  () => theme.global.name.value,
+  (newTheme) => {
+    const html = document.documentElement;
+    if (newTheme === DARK) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+  },
+  { immediate: true }
+);
 
 onMounted(() => {
   window.addEventListener("scroll", handleScroll);
@@ -32,6 +48,7 @@ onBeforeUnmount(() => {
   window.removeEventListener("scroll", handleScroll);
 });
 </script>
+
 <template>
   <header
     :class="[

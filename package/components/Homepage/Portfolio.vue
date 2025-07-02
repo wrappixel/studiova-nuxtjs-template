@@ -1,5 +1,5 @@
 <template>
-  <div class="position-relative bg-lightgray">
+  <div class="position-relative bg-darkgray">
     <!-- Section Spacer -->
     <SharedSectionSpacer />
     <div class="container-lg">
@@ -10,7 +10,7 @@
         <v-col cols="12" lg="8">
           <div class="d-flex flex-column ga-96">
             <SharedCommonHeading
-              class="mw-670"
+              class="mw-md-670"
               title="Featured projects"
               subtitle="A glimpse into our creativity—exploring innovative designs, successful collaborations, and transformative digital experiences."
             />

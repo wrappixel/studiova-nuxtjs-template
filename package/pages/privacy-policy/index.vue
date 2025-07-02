@@ -27,7 +27,9 @@ import MainImage from "/images/background/privacy-policy.png";
           </div>
         </div>
         <!-- Bottom row: title + badge -->
-        <div class="d-flex ga-5 align-end mt-6">
+        <div
+          class="d-flex flex-md-row flex-column ga-5 align-md-end align-start mt-md-6 mt-3"
+        >
           <h1 class="text-white text-h1 font-weight-bold mb-0">
             Privacy Policy
           </h1>
@@ -36,16 +38,18 @@ import MainImage from "/images/background/privacy-policy.png";
       </div>
     </div>
   </div>
-
-  <div class="container-lg my-lg-16 my-8">
-   
+  <div class="bg-darkgray leagal">
+    <div class="container-lg py-lg-16 py-8">
       <p class="text-subtitle-1">
         This Privacy Statement explains how personal information about our
         (potential) customers and other individuals using our services is
         collected, used, and disclosed by **Nuxtjs Template** ("us", "we",
         "our"). This Privacy Statement describes our privacy practices in
         relation to the use of our websites, including any customer portals or
-        interactive websites (<a class="hover-primary-link text-decoration-none text-black font-weight-bold" target="_blank" href="https://nuxt.com/"
+        interactive websites (<a
+          class="hover-primary-link text-decoration-none text-black font-weight-bold"
+          target="_blank"
+          href="https://nuxt.com/"
           >https://nuxt.com/</a
         >), our software (Nuxtjs), services, solutions, tools, and related
         applications, services, and programs, including research and marketing
@@ -70,7 +74,7 @@ import MainImage from "/images/background/privacy-policy.png";
         handle your information.
       </p>
       <div class="my-6">
-        <h4 class="text-h4 text-secondary">Personal Information Collection</h4>
+        <h4 class="text-h4 text-dark">Personal Information Collection</h4>
         <p class="mt-6 text-subtitle-1">
           While using our Services, we may ask you to provide certain personally
           identifiable information that can be used to contact or identify you.
@@ -85,7 +89,9 @@ import MainImage from "/images/background/privacy-policy.png";
         </p>
       </div>
       <div class="my-6">
-        <h4 class="text-h4 text-secondary">Personal Information You Provide to Us</h4>
+        <h4 class="text-h4 text-dark">
+          Personal Information You Provide to Us
+        </h4>
         <p class="mt-6 text-subtitle-1">
           When using our Services, you may provide personally identifiable
           information, such as when creating an account, requesting customer
@@ -94,11 +100,14 @@ import MainImage from "/images/background/privacy-policy.png";
         <p class="mt-6 text-subtitle-1">
           As noted, we do not collect financial details directly. Payments are
           processed via third-party providers. Please review their privacy
-          policy for details:<a class="hover-primary-link text-decoration-none text-black font-weight-bold" target="_blank" href="http://nuxtjstemplates.com/"
+          policy for details:<a
+            class="hover-primary-link text-decoration-none text-black font-weight-bold"
+            target="_blank"
+            href="http://nuxtjstemplates.com/"
             >http://nuxtjstemplates.com/</a
           >.
         </p>
       </div>
-   
+    </div>
   </div>
 </template>

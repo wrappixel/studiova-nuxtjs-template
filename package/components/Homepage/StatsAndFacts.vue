@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
 import { ref, onMounted } from "vue";
-import BgImage from "/images/background/bg-astrisk-icon.svg";
+import BgImage from "/images/background/bg-astrisk-icon.png";
+import BgImageWhite from "/images/background/bg-astrisk-icon-white.png";
 
 interface CounterItem {
   value: number;
@@ -70,7 +71,7 @@ function formatNumber(value: number, suffix: string) {
 </script>
 
 <template>
-  <div class="position-relative">
+  <div class="position-relative bg-surface overflow-hidden">
     <SharedSectionSpacer />
     <div class="container-lg">
       <v-row>
@@ -80,22 +81,22 @@ function formatNumber(value: number, suffix: string) {
         <v-col cols="12" lg="8">
           <div class="d-flex flex-column ga-11">
             <SharedCommonHeading
-              class="mw-575"
+              class="mw-md-575"
               title="High quality web design solutions you can trust."
               subtitle="When selecting a web design agency, it's essential to consider its reputation, experience, and the specific needs of your project."
             />
 
-            <div class="d-flex flex-md-row flex-column ga-8">
+            <div class="d-flex flex-sm-row flex-column ga-8">
               <div
-                class="d-flex flex-column ga-3 flex-grow-1 border-t border-muted"
+                class="d-flex flex-column ga-3 flex-grow-1 border-t "
                 v-for="(item, index) in items"
                 :key="index"
               >
-                <h3 class="text-60 text-secondary pt-6">
+                <h3 class="text-60 text-dark pt-6">
                   {{ formatNumber(animatedValues[index], item.suffix) }}+
                 </h3>
                 <p
-                  class="text-subtitle-2 text-secondary opacity-70 font-weight-regular"
+                  class="text-subtitle-2 text-dark opacity-70 font-weight-regular"
                 >
                   {{ item.caption }}
                 </p>
@@ -112,7 +113,9 @@ function formatNumber(value: number, suffix: string) {
         </v-col>
       </v-row>
     </div>
-    <img :src="BgImage" alt="icon" class="bg-icon" />
+    <img :src="BgImage" alt="icon" class="bg-icon d-md-block d-none" />
+    <img :src="BgImageWhite" alt="icon" class="bg-icon d-md-block d-none" />
+
     <SharedSectionSpacer />
   </div>
 </template>

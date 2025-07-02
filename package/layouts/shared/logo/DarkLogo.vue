@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import DarkLogo from '/images/logos/DarkLogo.svg';
+import DarkLogo from '/images/logos/Darkprimary.svg';
 </script>
 <template>
     <div class="logo lh-normal">

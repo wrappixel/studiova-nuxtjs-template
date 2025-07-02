@@ -6,7 +6,7 @@ import testimonial3 from "/images/profile/testimonial_3.webp";
 import Quotes from "/images/svgs/quotes.svg";
 </script>
 <template>
-  <div class="bg-lightgray">
+  <div class="stories bg-surface ">
     <SharedSectionSpacer />
     <div class="container-lg">
       <v-row>
@@ -27,8 +27,10 @@ import Quotes from "/images/svgs/quotes.svg";
         </v-col>
       </v-row>
       <v-row class="mt-md-16 mt-8">
-        <v-col cols="12" lg="3">
-          <div class="bg-primary pa-7">
+        <v-col cols="12" lg="3" class="d-flex">
+          <div
+            class="bg-primary pa-7 d-flex flex-column h-100 justify-space-between ga-16"
+          >
             <div class="d-flex flex-column ga-6">
               <p
                 class="text-subtitle-2 text-secondary opacity-70 font-weight-regular"
@@ -40,8 +42,8 @@ import Quotes from "/images/svgs/quotes.svg";
                 perfectly!
               </h4>
             </div>
-            <div class="pt-md-16 pt-8">
-              <div class="pt-md-12">
+            <div class="pt-12">
+             
                 <div class="d-flex ga-4 align-center">
                   <v-avatar size="60">
                     <img :src="testimonial1" alt="icon" class="w-100" />
@@ -53,12 +55,14 @@ import Quotes from "/images/svgs/quotes.svg";
                     </p>
                   </div>
                 </div>
-              </div>
+             
             </div>
           </div>
         </v-col>
-        <v-col cols="12" lg="6">
-          <div class="bg-secondary pa-7">
+        <v-col cols="12" lg="6" class="d-flex">
+          <div
+            class="here-from bg-secondary pa-7 d-flex flex-column h-100 justify-space-between"
+          >
             <div class="d-flex flex-column ga-6">
               <p
                 class="text-subtitle-2 text-white opacity-70 font-weight-regular"
@@ -84,8 +88,8 @@ import Quotes from "/images/svgs/quotes.svg";
                 <span class="text-subtitle-2">4.0</span>
               </div>
             </div>
-            <div class="pt-md-16 pt-8">
-              <div class="pt-md-10">
+            <div class="pt-12">
+        
                 <div class="d-flex justify-space-between align-center">
                   <div class="d-flex ga-4 align-center">
                     <v-avatar size="60">
@@ -104,15 +108,17 @@ import Quotes from "/images/svgs/quotes.svg";
                     <img :src="Quotes" alt="icon" height="35" width="45" />
                   </div>
                 </div>
-              </div>
+              
             </div>
           </div>
         </v-col>
-        <v-col cols="12" lg="3">
-          <div class="bg-white pa-7">
+        <v-col cols="12" lg="3" class="d-flex">
+          <div
+            class="bg-accent pa-7 d-flex flex-column h-100 justify-space-between"
+          >
             <div class="d-flex flex-column ga-6">
               <p
-                class="text-subtitle-2 text-secondary opacity-70 font-weight-regular"
+                class="text-subtitle-2 text-dark opacity-70 font-weight-regular"
               >
                 Hear from them
               </p>
@@ -120,20 +126,20 @@ import Quotes from "/images/svgs/quotes.svg";
                 Super smooth process with incredible results. highly recommend!
               </h4>
             </div>
-            <div class="pt-md-16 pt-8">
-              <div class="pt-md-16">
+            <div class="pt-12">
+             
                 <div class="d-flex ga-4 align-center pt-5">
                   <v-avatar size="60">
                     <img :src="testimonial3" alt="icon" class="w-100" />
                   </v-avatar>
                   <div>
                     <h5 class="text-subtitle-1">Jenny Wilson</h5>
-                    <p class="text-subtitle-2 text-secondary opacity-70">
+                    <p class="text-subtitle-2 text-dark opacity-70">
                       Pizza Hut
                     </p>
                   </div>
                 </div>
-              </div>
+             
             </div>
           </div>
         </v-col>

@@ -5,13 +5,17 @@ const LIGHT_THEME: ThemeTypes = {
     dark: false,
     variables: {
         'border-color': '#e0e6eb',
+        'border-opacity': 1,
     },
     colors: {
         primary: '#C1FF72',
         secondary: '#1f2a2e',
         muted:'#E0E0E0',
         white:'#ffffff',
-        lightgray:'#F4F8FA'
+        lightgray:'#F4F8FA',
+        dark:'#1f2a2e',
+        surface:'#F4F8FA',
+        accent:'#ffffff'
     }
 };
 

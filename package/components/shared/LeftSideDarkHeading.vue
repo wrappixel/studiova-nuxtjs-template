@@ -12,8 +12,8 @@ const props = defineProps({
       class="text-subtitle-2 font-weight-semibold text-secondary"
       >{{ number }}</v-avatar
     >
-    <span class="w-64 border-t border-secondary"></span>
-    <v-chip color="secondary" class="text-subtitle-2 px-4" variant="flat">
+    <span class="w-64 border-t"></span>
+    <v-chip color="dark" class="text-subtitle-2 px-4" variant="flat">
       {{ title }}
     </v-chip>
   </div>

@@ -31,6 +31,7 @@ const items = [
 </script>
 
 <template>
+  <div class="meet-team bg-darkgray">
   <SharedSectionSpacer />
   <div class="container-lg">
     <v-row>
@@ -86,11 +87,12 @@ const items = [
         </div>
         <div class="mt-5">
           <h4 class="text-h4">{{ item.name }}</h4>
-          <p class="text-secondary opacity-70">{{ item.role }}</p>
+          <p class="text-dark opacity-70">{{ item.role }}</p>
         </div>
       </v-col>
     </v-row>
   </div>
 
   <SharedSectionSpacer />
+  </div>
 </template>

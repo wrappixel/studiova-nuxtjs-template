@@ -104,7 +104,7 @@ const logos = [
 ];
 </script>
 <template>
-  <div class="bg-lightgray">
+  <div class="pricing bg-surface">
     <SharedSectionSpacer />
     <div class="container-lg overflow-hidden">
       <v-row>
@@ -125,15 +125,16 @@ const logos = [
         </v-col>
       </v-row>
       <div class="pricing mt-md-16 mt-10">
-        <v-row class="justify-center">
+        <v-row >
           <v-col
             v-for="(plan, index) in plans"
             :key="plan.title"
             cols="12"
-            md="4"
+            lg="4"
+            md="6"
             class="d-flex"
           >
-            <v-card class="pa-lg-12 pa-6 flex-grow-1 bg-white" elevation="0">
+            <v-card class="pa-lg-12 pa-6 flex-grow-1 bg-accent" elevation="0">
               <div class="d-flex justify-space-between align-center mb-4">
                 <div class="d-flex flex-column ga-5">
                   <div class="d-flex ga-3">
@@ -154,7 +155,7 @@ const logos = [
                   <div class="d-flex align-center ga-2">
                     <div class="d-flex ga-4">
                       <h3
-                        class="text-h3 font-weight-bold text-secondary opacity-40 text-decoration-line-through"
+                        class="text-h3 font-weight-bold text-dark opacity-40 text-decoration-line-through"
                         v-if="plan.strikeprice"
                       >
                         ${{ plan.strikeprice }}
@@ -163,7 +164,7 @@ const logos = [
                         ${{ plan.price }}
                       </h3>
                     </div>
-                    <small class="text-secondary opacity-70 text-subtitle-1"
+                    <small class="text-dark opacity-70 text-subtitle-1"
                       >/month</small
                     >
                   </div>
@@ -171,11 +172,11 @@ const logos = [
               </div>
 
               <p
-                class="text-subtitle-2 text-secondary opacity-70 font-weight-regular mb-6"
+                class="text-subtitle-2 text-dark opacity-70 font-weight-regular mb-6"
               >
                 {{ plan.description }}
               </p>
-              <v-divider class="my-10"></v-divider>
+              <v-divider class="my-10 opacity-10"></v-divider>
               <div class="mb-6">
                 <p class="text-subtitle-2 mb-2">What’s Included:</p>
                 <ul class="d-flex flex-column ga-4 mt-4">

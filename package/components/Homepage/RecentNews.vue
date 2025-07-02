@@ -1,6 +1,6 @@
 
 <template>
-  <div class="bg-lightgray">
+  <div class="bg-surface">
     <SharedSectionSpacer />
     <div class="container-lg overflow-hidden">
       <v-row>

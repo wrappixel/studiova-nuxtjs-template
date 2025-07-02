@@ -44,3 +44,9 @@ html {
   list-style: none;
   margin-left: 0;
 }
+
+.hover-opacity-1{
+  &:hover{
+    opacity: 1 !important;
+  }
+}

@@ -84,6 +84,7 @@ const decrement = (index: number) => {
 
 
 <template>
+  <div class="bg-darkgray">
   <SharedSectionSpacer />
   <div class="container-lg overflow-hidden">
     <v-row>
@@ -127,19 +128,19 @@ const decrement = (index: number) => {
           md="4"
           class="px-8"
         >
-          <h2 class="text-60 font-weight-bold lh-in text-secondary">
+          <h2 class="text-60 font-weight-bold lh-in text-dark">
             {{ item.prefix || "" }}{{ item.animatedValue
             }}{{ item.suffix || "" }}
           </h2>
 
-          <v-divider class="mb-6 mt-4"></v-divider>
+          <v-divider class="mb-6 mt-4 opacity-10"></v-divider>
 
-          <h4 class="text-h4 font-weight-bold mb-3 text-secondary">
+          <h4 class="text-h4 font-weight-bold mb-3 text-dark">
             {{ item.title }}
           </h4>
 
           <div
-            class="text-subtitle-2 text-secondary opacity-70 font-weight-regular mb-4"
+            class="text-subtitle-2 text-dark opacity-70 font-weight-regular mb-4"
           >
             {{ item.description }}
           </div>
@@ -150,4 +151,5 @@ const decrement = (index: number) => {
     </div>
   </div>
   <SharedSectionSpacer />
+  </div>
 </template>

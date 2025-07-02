@@ -38,7 +38,7 @@ import AnimatedIcon from "/images/svgs/astrisk-icon.svg";
         </div>
 
         <!-- Bottom row: title + badge -->
-        <div class="d-flex ga-5 align-end mt-6">
+        <div class="d-flex flex-md-row flex-column ga-5 align-md-end align-start mt-md-6 mt-3">
           <h1 class="text-white text-h1 font-weight-bold mb-0">Studiova</h1>
           <SharedBigBadge />
         </div>

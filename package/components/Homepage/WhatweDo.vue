@@ -66,14 +66,14 @@ const activeItem = ref(items[0]);
 
       <v-row class="mt-16">
         <!-- LEFT SIDE IMAGE -->
-        <v-col cols="12" lg="4" class="position-relative">
+        <v-col cols="12" lg="4" md="6" class="position-relative">
           <v-fade-transition>
             <img
               v-if="activeItem"
               :src="activeItem.image"
               height="250"
               width="400"
-              class="position-absolute"
+              class="img-offset"
               style="
                 transition: transform 0.5s ease;
                 transform: translateY(var(--img-offset));
@@ -84,13 +84,13 @@ const activeItem = ref(items[0]);
         </v-col>
 
         <!-- RIGHT SIDE TEXT LIST -->
-        <v-col cols="12" lg="8">
+        <v-col cols="12" lg="8" md="6">
           <div>
             <div
               v-for="(item, index) in items"
               :key="index"
               @mouseenter="activeItem = item"
-              class="py-10 border-t border-white border-opacity hover-primary-title"
+              class="py-md-12 py-8 border-t border-white border-opacity hover-primary-title"
             >
               <v-row class="align-center">
                 <v-col cols="12" lg="5">
@@ -98,8 +98,8 @@ const activeItem = ref(items[0]);
                     {{ item.title }}
                   </h3>
                 </v-col>
-                <v-col cols="12" lg="7">
-                  <div style="min-height: 50px">
+                <v-col cols="12" lg="7" class="py-0">
+                  <div >
                     <v-expand-transition>
                       <p
                         v-if="activeItem?.title === item.title"

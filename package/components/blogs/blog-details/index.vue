@@ -41,7 +41,9 @@ const post = computed(() => {
           </div>
         </div>
         <!-- Bottom row: title + badge -->
-        <div class="d-flex ga-5 align-end mt-6">
+        <div
+          class="d-flex flex-md-row flex-column ga-5 align-md-end align-start mt-md-6 mt-3"
+        >
           <h1 class="text-white text-60 font-weight-bold mb-0">
             {{ post.blog_title }}
           </h1>
@@ -51,36 +53,42 @@ const post = computed(() => {
     </div>
   </div>
   <!-- Blog Details -->
-  <SharedSectionSpacer />
-  <div class="container-lg">
-    <v-row class="d-flex align-center">
-      <!-- LEFT SIDE IMAGE -->
-      <v-col cols="12" lg="4">
-        <h2 class="text-60 text-secondary">Scroll to read</h2>
-      </v-col>
-      <v-col cols="12" lg="8"
-        ><p class="text-secondary text-subtitle-1 opacity-70">
-          At Studiova, we're always evolving, and our latest brand redesign is a
-          bold step forward. This transformation reflects our commitment to
-          innovation and growth, both in how we look and how we connect with
-          you.
-        </p>
-      </v-col>
-      <v-col cols="12" class="mt-lg-16 mt-8">
-        <div class="lh-0">
-          <v-img
-            :src="post.blog_inner_image"
-            alt="project inner image"
-            class="w-100" cover height="600"
-          ></v-img>
-
-        </div>
-      </v-col>
-      <v-col cols="12" lg="4"></v-col>
-      <v-col cols="12" lg="8"
-        ><div class="project-desciption mt-lg-16 mt-8" v-html="post.blog_description"></div
-      ></v-col>
-    </v-row>
+  <div class="bg-darkgray">
+    <SharedSectionSpacer />
+    <div class="container-lg">
+      <v-row class="d-flex align-center">
+        <!-- LEFT SIDE IMAGE -->
+        <v-col cols="12" lg="4">
+          <h2 class="text-60 text-dark">Scroll to read</h2>
+        </v-col>
+        <v-col cols="12" lg="8"
+          ><p class="text-dark text-subtitle-1 opacity-70">
+            At Studiova, we're always evolving, and our latest brand redesign is
+            a bold step forward. This transformation reflects our commitment to
+            innovation and growth, both in how we look and how we connect with
+            you.
+          </p>
+        </v-col>
+        <v-col cols="12" class="mt-lg-16 mt-8">
+          <div class="lh-0">
+            <v-img
+              :src="post.blog_inner_image"
+              alt="project inner image"
+              class="w-100"
+              cover
+              height="600"
+            ></v-img>
+          </div>
+        </v-col>
+        <v-col cols="12" lg="4"></v-col>
+        <v-col cols="12" lg="8"
+          ><div
+            class="project-desciption mt-lg-16 mt-8"
+            v-html="post.blog_description"
+          ></div
+        ></v-col>
+      </v-row>
+    </div>
+    <SharedSectionSpacer />
   </div>
-  <SharedSectionSpacer />
 </template>
