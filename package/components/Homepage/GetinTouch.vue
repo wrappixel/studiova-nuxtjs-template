@@ -26,19 +26,39 @@ import { Icon } from "@iconify/vue";
           </div>
 
           <div class="mt-8">
-            <form class="d-flex flex-column ga-2">
-              <v-text-field label="Name" variant="underlined"></v-text-field>
+            <form
+              class="d-flex flex-column ga-2"
+              action="https://formsubmit.co/bhainirav772@gmail.com"
+              method="POST"
+            >
               <v-text-field
+                name="name"
+                label="Name"
+                variant="underlined"
+                required
+              ></v-text-field>
+
+              <v-text-field
+                name="email"
                 label="Email"
                 type="email"
                 variant="underlined"
+                required
               ></v-text-field>
+
               <v-textarea
+                name="message"
                 label="Tell us about your project"
                 variant="underlined"
               ></v-textarea>
-              <v-btn class="interactive-button w-100" size="lg" flat>
-                <span class="label">submit messege</span>
+
+              <v-btn
+                class="interactive-button w-100"
+                size="lg"
+                flat
+                type="submit"
+              >
+                <span class="label">Submit Message</span>
                 <v-avatar size="45" class="icon bg-white">
                   <Icon icon="material-symbols:arrow-outward" height="20" />
                 </v-avatar>
