@@ -28,7 +28,7 @@ import { Icon } from "@iconify/vue";
           <div class="mt-8">
             <form
               class="d-flex flex-column ga-2"
-              action="https://formsubmit.co/bhainirav772@gmail.com"
+              action="https://formsubmit.co/ajax/bhainirav772@gmail.com"
               method="POST"
             >
               <v-text-field
